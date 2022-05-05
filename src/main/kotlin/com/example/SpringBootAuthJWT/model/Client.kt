@@ -1,5 +1,6 @@
 package com.example.SpringBootAuthJWT.model
 
+import com.fasterxml.jackson.annotation.JsonFormat
 import lombok.AllArgsConstructor
 import lombok.Data
 import lombok.NoArgsConstructor
@@ -26,6 +27,7 @@ data class Client (
     @Column(nullable = false, length = 11)
     var cpf : String = "",
     @Column(name = "register_data")
+    @JsonFormat(pattern = "dd/MM/yyyy")
     var registerData : LocalDate?
 ) {
     constructor() : this (
