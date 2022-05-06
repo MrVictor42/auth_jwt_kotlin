@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor
 import lombok.Data
 import lombok.NoArgsConstructor
 import org.hibernate.Hibernate
+import org.hibernate.validator.constraints.br.CPF
 import java.math.BigDecimal
 import java.time.LocalDate
 import javax.persistence.Column
@@ -13,6 +14,8 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.PrePersist
+import javax.validation.constraints.NotEmpty
+import javax.validation.constraints.NotNull
 
 @Entity
 @Data
@@ -21,12 +24,12 @@ import javax.persistence.PrePersist
 data class Client (
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private val id : Int,
+    var id : Int,
     @Column(nullable = false, length = 60)
     var name : String = "",
     @Column(nullable = false, length = 11)
     var cpf : String = "",
-    @Column(name = "register_data")
+    @Column(name = "register_data", updatable = false)
     @JsonFormat(pattern = "dd/MM/yyyy")
     var registerData : LocalDate?
 ) {
