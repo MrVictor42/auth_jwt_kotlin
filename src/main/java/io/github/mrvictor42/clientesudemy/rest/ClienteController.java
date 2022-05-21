@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/clientes")
+@CrossOrigin("http://localhost:4200")
 public class ClienteController {
 
 //    @Value("${application.name}")
@@ -67,5 +69,10 @@ public class ClienteController {
                     return clienteRepository.save(cliente);
                 })
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente não encontrado"));
+    }
+
+    @GetMapping("users_list")
+    public List<Cliente> pegarUsuarios() {
+        return clienteRepository.findAll();
     }
 }
