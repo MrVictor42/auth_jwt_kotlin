@@ -1,4 +1,4 @@
-package io.github.mrvictor42.clientesudemy.rest;
+package io.github.mrvictor42.clientesudemy.rest.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
