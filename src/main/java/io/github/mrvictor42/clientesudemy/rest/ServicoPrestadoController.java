@@ -2,8 +2,8 @@ package io.github.mrvictor42.clientesudemy.rest;
 
 import io.github.mrvictor42.clientesudemy.model.entity.Cliente;
 import io.github.mrvictor42.clientesudemy.model.entity.ServicoPrestado;
-import io.github.mrvictor42.clientesudemy.repository.ClienteRepository;
-import io.github.mrvictor42.clientesudemy.repository.ServicoPrestadoRepository;
+import io.github.mrvictor42.clientesudemy.model.repository.ClienteRepository;
+import io.github.mrvictor42.clientesudemy.model.repository.ServicoPrestadoRepository;
 import io.github.mrvictor42.clientesudemy.rest.dto.ServicoPrestadoDTO;
 import io.github.mrvictor42.clientesudemy.util.BigDecimalConverter;
 import lombok.RequiredArgsConstructor;

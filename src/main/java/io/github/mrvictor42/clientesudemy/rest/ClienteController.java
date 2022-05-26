@@ -1,9 +1,8 @@
 package io.github.mrvictor42.clientesudemy.rest;
 
 import io.github.mrvictor42.clientesudemy.model.entity.Cliente;
-import io.github.mrvictor42.clientesudemy.repository.ClienteRepository;
+import io.github.mrvictor42.clientesudemy.model.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;

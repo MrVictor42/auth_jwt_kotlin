@@ -1,4 +1,4 @@
-package io.github.mrvictor42.clientesudemy.repository;
+package io.github.mrvictor42.clientesudemy.model.repository;
 
 import io.github.mrvictor42.clientesudemy.model.entity.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
