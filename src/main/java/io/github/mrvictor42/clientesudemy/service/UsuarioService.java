@@ -20,7 +20,7 @@ public class UsuarioService implements UserDetailsService {
         boolean exists = usuarioRepository.existsByUsername(usuario.getUsername());
 
         if(exists) {
-            throw new UsuarioCadastradoException(usuario.getPassword());
+            throw new UsuarioCadastradoException(usuario.getUsername());
         } else {
             return usuarioRepository.save(usuario);
         }
